@@ -1,7 +1,6 @@
 package edu.tdt.hamilton;
 
 import edu.tdt.graph.Graph;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 
