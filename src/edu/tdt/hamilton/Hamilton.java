@@ -71,7 +71,6 @@ public class Hamilton {
                 if(this.hamilton[0] == this.hamilton[k] && k == g.noOfNode)
                 {
                     this.hamiltonCircuit.add(getHamiltonCircuitString());
-                    return;         // Hide this 'return' to get all possible Hamilton circuits
                 }
                 else if(visited[i] == 0)
                 {
