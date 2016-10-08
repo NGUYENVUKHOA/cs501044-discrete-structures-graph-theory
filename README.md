@@ -1,7 +1,7 @@
 # CS501044 - Discrete Structures - Graph Theory (Lab Section)
 
 ## Introduction
-This program contains Java classes which implement some basic algorithms in Graph Theory:
+This project contains Java classes which implement some basic algorithms in Graph Theory:
 
  - Find number of connected components.
  - Depth-first search and Breadth-first search.
