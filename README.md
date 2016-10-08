@@ -20,4 +20,4 @@ It is very easy to run and test this project. Suppose you successfully clone it 
 ## Contributors
 **Phuc Duong** *(Lecturer)* - Ton Duc Thang University (Vietnam) - `dhphuc@office.it.tdt.edu.vn` | `huuphucduong@gmail.com`
 
-I appreciate your contribution to this repository. Feel free to contact me to update this project.
+I appreciate your contribution to this repository. Feel free to contact me!
