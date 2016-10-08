@@ -1,4 +1,4 @@
-# CS501044 - Discrete Structures - Graph & Tree (Lab Section)
+# CS501044 - Discrete Structures - Graph Theory (Lab Section)
 
 ## Introduction
 This program contains Java classes which implement some basic algorithms in Graph Theory:
