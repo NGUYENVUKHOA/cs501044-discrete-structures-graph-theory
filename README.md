@@ -18,6 +18,6 @@ It is very easy to run and test this project. Suppose you successfully clone it 
 [http://it.tdt.edu.vn/~dhphuc/teaching/cs501044/](http://it.tdt.edu.vn/~dhphuc/teaching/cs501044/)
 
 ## Contributors
-**Phuc Duong** *(Lecturer)* - `dhphuc@office.it.tdt.edu.vn`
+**Phuc Duong** *(Lecturer)* - `dhphuc@office.it.tdt.edu.vn` | `huuphucduong@gmail.com`
 
 I appreciate your contribution to this repository. Feel free to contact me to update this project.
