@@ -11,6 +11,6 @@ public class Test {
         PathFinding p = new PathFinding();
         p.readGraph("resources/test5.txt");
         System.out.println(p.DFS(0, 14));
-        System.out.println(p.BFS(0, 14));
+        System.out.println(p.BFS(14, 0));
     }
 }

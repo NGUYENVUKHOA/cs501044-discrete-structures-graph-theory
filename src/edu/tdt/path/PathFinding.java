@@ -31,7 +31,7 @@ public class PathFinding {
             start = fringe.pop();
             g.visited[start] = 1;
 
-            for(int i = g.noOfNode - 1; i > 0; i--)
+            for(int i = g.noOfNode - 1; i >= 0; i--)
             {
                 if(g.A[start][i] != 0 && g.visited[i] == 0)
                 {
