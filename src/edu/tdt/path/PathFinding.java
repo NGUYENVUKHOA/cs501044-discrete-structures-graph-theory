@@ -89,7 +89,7 @@ public class PathFinding {
             int i = end;
             while(i != start)
             {
-                path += i;
+                path = path + i + " ";
                 i = g.tracking[i];
             }
             path += start;
@@ -129,7 +129,7 @@ public class PathFinding {
             int i = end;
             while(i != start)
             {
-                path += i;
+                path = path + i + " ";
                 i = g.tracking[i];
             }
             path += start;
