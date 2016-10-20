@@ -23,19 +23,19 @@ public class PathFinding {
 
     private void _DFS(int start)
     {
-        Stack<Integer> fringe = new Stack<Integer>();
-        fringe.add(start);
+        Stack<Integer> stack = new Stack<Integer>();
+        stack.add(start);
 
-        while(!fringe.isEmpty())
+        while(!stack.isEmpty())
         {
-            start = fringe.pop();
+            start = stack.pop();
             g.visited[start] = 1;
 
             for(int i = g.noOfNode - 1; i >= 0; i--)
             {
                 if(g.A[start][i] != 0 && g.visited[i] == 0)
                 {
-                    fringe.push(i);
+                    stack.push(i);
                     g.tracking[i] = start;
                 }
             }
