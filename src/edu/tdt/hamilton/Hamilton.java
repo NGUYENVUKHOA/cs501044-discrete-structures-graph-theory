@@ -34,7 +34,7 @@ public class Hamilton {
 
     public ArrayList<String> getHamiltonCircuit(final int start)
     {
-        if(start < 0 || start >= g.noOfNode)
+        if(start < 0 || start >= g.noOfVertices)
             return null;
 
         this.hamilton[0] = start;
@@ -54,7 +54,7 @@ public class Hamilton {
     private String getHamiltonCircuitString()
     {
         StringBuilder output = new StringBuilder();
-        for(int i = 0; i <= g.noOfNode; i++)    // Because the start and end vertices of Hamilton circuit must be the same
+        for(int i = 0; i <= g.noOfVertices; i++)    // Because the start and end vertices of Hamilton circuit must be the same
             output.append(hamilton[i]);
 
         this.noOfCircuits++;
@@ -64,11 +64,11 @@ public class Hamilton {
 
     private void _hamiltion(int k)
     {
-        for (int i = 0; i < g.noOfNode; i++)
+        for (int i = 0; i < g.noOfVertices; i++)
         {
             if(g.A[hamilton[k]][i] != 0)
             {
-                if(this.hamilton[0] == this.hamilton[k] && k == g.noOfNode)
+                if(this.hamilton[0] == this.hamilton[k] && k == g.noOfVertices)
                 {
                     this.hamiltonCircuit.add(getHamiltonCircuitString());
                 }

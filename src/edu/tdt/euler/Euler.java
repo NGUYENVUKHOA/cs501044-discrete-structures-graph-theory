@@ -25,7 +25,7 @@ public class Euler {
 
     private void findConnectedVertices(int currVertice)
     {
-        for(int i = 0; i < g.noOfNode; i++)
+        for(int i = 0; i < g.noOfVertices; i++)
         {
             if(g.A[currVertice][i] != 0 && label[currVertice] != label[i])
             {
@@ -39,7 +39,7 @@ public class Euler {
     {
         int noOfConnectedness = 0;
 
-        for(int i = 0; i < g.noOfNode; i++)
+        for(int i = 0; i < g.noOfVertices; i++)
         {
             if(label[i] == 0)
             {
@@ -58,10 +58,10 @@ public class Euler {
 
     public boolean isEulerCircuit()
     {
-        for(int i = 0; i < g.noOfNode; i++)
+        for(int i = 0; i < g.noOfVertices; i++)
         {
             int tmp = 0;
-            for(int j = 0; j < g.noOfNode; j++)
+            for(int j = 0; j < g.noOfVertices; j++)
             {
                 if(g.A[i][j] != 0)
                     tmp++;
@@ -92,13 +92,13 @@ public class Euler {
             int curNode = stack.peek();
 
             int j = 0;
-            for(j = 0; j < tmpGraph.noOfNode; j++)
+            for(j = 0; j < tmpGraph.noOfVertices; j++)
             {
                 if(tmpGraph.A[curNode][j] != 0)
                     break;
             }
 
-            if(j < tmpGraph.noOfNode)
+            if(j < tmpGraph.noOfVertices)
             {
                 stack.push(j);
                 tmpGraph.A[curNode][j] = tmpGraph.A[j][curNode] = 0;
@@ -110,9 +110,9 @@ public class Euler {
         }
 
         // Case 1: still exist at least an edge in graph
-        for(int i = 0; i < tmpGraph.noOfNode; i++)
+        for(int i = 0; i < tmpGraph.noOfVertices; i++)
         {
-            for(int j = 0; j < tmpGraph.noOfNode; j++)
+            for(int j = 0; j < tmpGraph.noOfVertices; j++)
             {
                 if(tmpGraph.A[i][j] != 0)
                     return null;
@@ -130,10 +130,10 @@ public class Euler {
     public boolean isEulerTrail()
     {
         int countOddDegreeVertices = 0;
-        for(int i = 0; i < g.noOfNode; i++)
+        for(int i = 0; i < g.noOfVertices; i++)
         {
             int tmp = 0;
-            for(int j = 0; j < g.noOfNode; j++)
+            for(int j = 0; j < g.noOfVertices; j++)
             {
                 if(g.A[i][j] != 0)
                     tmp++;
@@ -169,13 +169,13 @@ public class Euler {
             int curNode = stack.peek();
 
             int j = 0;
-            for(j = 0; j < tmpGraph.noOfNode; j++)
+            for(j = 0; j < tmpGraph.noOfVertices; j++)
             {
                 if(tmpGraph.A[curNode][j] != 0)
                     break;
             }
 
-            if(j < tmpGraph.noOfNode)
+            if(j < tmpGraph.noOfVertices)
             {
                 stack.push(j);
                 tmpGraph.A[curNode][j] = tmpGraph.A[j][curNode] = 0;
@@ -187,9 +187,9 @@ public class Euler {
         }
 
         // Case 1: still exist at least an edge in graph
-        for(int i = 0; i < tmpGraph.noOfNode; i++)
+        for(int i = 0; i < tmpGraph.noOfVertices; i++)
         {
-            for(int j = 0; j < tmpGraph.noOfNode; j++)
+            for(int j = 0; j < tmpGraph.noOfVertices; j++)
             {
                 if(tmpGraph.A[i][j] != 0)
                     return null;
@@ -206,10 +206,10 @@ public class Euler {
 
     private int getFirstOddDegreeVertex()
     {
-        for(int i = 0; i < g.noOfNode; i++)
+        for(int i = 0; i < g.noOfVertices; i++)
         {
             int degree = 0;
-            for(int j = 0; j < g.noOfNode; j++)
+            for(int j = 0; j < g.noOfVertices; j++)
             {
                 if(g.A[i][j] != 0)
                     degree++;

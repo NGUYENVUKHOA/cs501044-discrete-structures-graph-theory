@@ -10,14 +10,14 @@ public class Graph {
 
     private static int MAX = 100;
     public int[][] A;
-    public int noOfNode;
+    public int noOfVertices;
     public int[] visited;
     public int[] tracking;
 
     public Graph()
     {
         A = new int[MAX][MAX];
-        noOfNode = 0;
+        noOfVertices = 0;
         visited = new int[MAX];
         tracking = new int[MAX];
     }
@@ -25,15 +25,15 @@ public class Graph {
     public Graph(final Graph g)
     {
         A = new int[MAX][MAX];
-        for(int i = 0; i < g.noOfNode; i++)
+        for(int i = 0; i < g.noOfVertices; i++)
         {
-            for(int j = 0; j < g.noOfNode; j++)
+            for(int j = 0; j < g.noOfVertices; j++)
             {
                 this.A[i][j] = g.A[i][j];
             }
         }
 
-        noOfNode = g.noOfNode;
+        noOfVertices = g.noOfVertices;
         visited = new int[MAX];
         tracking = new int[MAX];
     }
@@ -51,14 +51,14 @@ public class Graph {
             int lineNumber = 0;
             while((line = bufferedReader.readLine()) != null)
             {
-                if(noOfNode == 0)	// First line is the number of nodes
+                if(noOfVertices == 0)	// First line is the number of nodes
                 {
-                    noOfNode = Integer.parseInt(line);
+                    noOfVertices = Integer.parseInt(line);
                 }
                 else
                 {
                     String[] data = line.split("\t");
-                    for(int j = 0; j < noOfNode; j++)
+                    for(int j = 0; j < noOfVertices; j++)
                     {
                         A[lineNumber][j] = Integer.parseInt(data[j]);
                     }

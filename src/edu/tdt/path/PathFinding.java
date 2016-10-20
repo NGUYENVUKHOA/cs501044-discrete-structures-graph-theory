@@ -31,7 +31,7 @@ public class PathFinding {
             start = stack.pop();
             g.visited[start] = 1;
 
-            for(int i = g.noOfNode - 1; i >= 0; i--)
+            for(int i = g.noOfVertices - 1; i >= 0; i--)
             {
                 if(g.A[start][i] != 0 && g.visited[i] == 0)
                 {
@@ -52,7 +52,7 @@ public class PathFinding {
             start = queue.remove();
             g.visited[start] = 1;
 
-            for(int i = 0; i < g.noOfNode; i++)
+            for(int i = 0; i < g.noOfVertices; i++)
             {
                 if(g.A[start][i] != 0 && g.visited[i] == 0)
                 {
@@ -66,14 +66,14 @@ public class PathFinding {
 
     public String DFS(final int start, final int end)
     {
-        if(g.noOfNode == 0)
+        if(g.noOfVertices == 0)
         {
             System.err.println("Please import the graph first!");
             return null;
         }
 
         // 1- Set Visited and Tracking to default value
-        for(int i = 0; i < g.noOfNode; i++)
+        for(int i = 0; i < g.noOfVertices; i++)
         {
             g.visited[i] = 0;
             g.tracking[i] = -1;
@@ -106,14 +106,14 @@ public class PathFinding {
 
     public String BFS(final int start, final int end)
     {
-        if(g.noOfNode == 0)
+        if(g.noOfVertices == 0)
         {
             System.err.println("Please import the graph first!");
             return null;
         }
 
         // 1- Set Visited and Tracking to default value
-        for(int i = 0; i < g.noOfNode; i++)
+        for(int i = 0; i < g.noOfVertices; i++)
         {
             g.visited[i] = 0;
             g.tracking[i] = -1;
